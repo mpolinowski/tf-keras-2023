@@ -57,12 +57,11 @@ model.add(Dense(1000, activation='softmax'))
 # model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 # model.summary()
 
-
 # using the pre-trained vgg16 instead of a fresh version
 vgg16 = VGG16()
 
 # load image for prediction
-img = load_img('data/HK-LR2020_76.jpg', target_size=(224, 224))
+img = load_img('data/sombrero.jpg', target_size=(224, 224))
 img = img_to_array(img)
 img = img.reshape(1,224,224,3)
 
